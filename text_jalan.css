@@ -1,0 +1,28 @@
+.container-music {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+  }
+  
+  .music {
+    margin-top: 20px;
+ 
+    width: 350px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  #typewriter-title,
+  #typewriter-content {
+
+   
+    text-align: center;
+    margin: 6px 0;
+  }

@@ -26,7 +26,7 @@
   --smaller-font-size: .75rem;
 }
 
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 1068px) {
   :root {
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -137,7 +137,7 @@ body.dark-theme {
 
 /*=============== PROFILE ===============*/
 .profile {
-    border-radius:15px;
+   
   position: relative;
   padding-top: 3.5rem;
 }
@@ -255,6 +255,7 @@ body.dark-theme {
 
 /*=============== BUTTONS ===============*/
 .button {
+  height: 50px;
   display: inline-flex;
   align-items: center;
   column-gap: .5rem;
@@ -290,25 +291,30 @@ body.dark-theme {
 
 /*=============== FILTERS TABS===============*/
 .filters__content {
+ 
+  align-items: center;
   margin: 2rem 0 2.5rem;
   background-color: var(--text-color-lighten);
-  padding: .375rem;
-  border-radius: .75rem;
+  padding: .225em;
+ width: 700px;
+  border-radius: .98rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   column-gap: .5rem;
+  max-width: 100%; /* Optional: to ensure responsiveness */
 }
 
+
 .filters__button {
-  width: 100%;
-  border: none;
+  width: 80%;
+  border:none;
   outline: none;
   padding: 1rem;
   color: var(--title-color);
   font-size: var(--small-font-size);
   font-family: var(--body-font);
-  font-weight: 500;
-  border-radius: .75rem;
+  font-weight: 300;
+  border-radius: .98rem;
   cursor: pointer;
   background-color: transparent;
   transition: .3s;

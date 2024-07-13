@@ -11,23 +11,26 @@
   <!--=============== ICONS and lainnya ===============-->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="contack.css">
   <link rel="stylesheet" href="tabbar.css">
+  <link rel="stylesheet" href="album.css">
+  <link rel="stylesheet" href="text_jalan.css">
+ 
 
 
   <title>satoru</title>
 </head>
 
 <body>
- 
-   
+
+
   <!--=============== HEADER ===============-->
   <header class="profile container">
-    
+
     <!-- Theme button -->
     <i class="ri-moon-line change-theme" id="theme-button"></i>
 
@@ -37,7 +40,7 @@
           <div class="profile__perfil">
             <!-- Insert your image, according to the example size of the portfolio -->
             <img src="assets/profile.avif" alt="">
-              
+
           </div>
         </div>
 
@@ -81,7 +84,7 @@
         <a download="" href="assets/pdf/alvan-Cv.pdf" class="button">
           Download CV <i class="ri-download-line"></i>
         </a>
-        
+
 
         <div class="profile__buttons-small">
           <!-- Insert a real number plus country code -->
@@ -97,6 +100,16 @@
     </div>
   </header>
 
+  <!-- text -->
+  <div class="container-music">
+    <div class="music">
+      <h1 id="typewriter-title"></h1>
+      <p id="typewriter-content"></p>
+    </div>
+  </div>
+
+
+
   <!--=============== MAIN ===============-->
   <main class="main">
     <section class="filters container">
@@ -109,8 +122,11 @@
           Skills
         </button>
         <button class="filters__button" data-target="#contack">
-            Contack
-          </button>
+          Contack
+        </button>
+        <button class="filters__button" data-target="#gallery">
+          Foto
+        </button>
       </ul>
 
       <div class="filters__sections">
@@ -172,8 +188,6 @@
               </div>
             </div>
           </article>
-
-      
         </div>
 
         <!--=============== SKILLS ===============-->
@@ -244,7 +258,7 @@
           </div>
 
 
-          
+
 
           <div class="skills__area">
             <h3 class="skills__title">Backend Developer</h3>
@@ -320,91 +334,125 @@
               </div>
             </div>
           </div>
-
-
         </div>
 
-
+        <!-- contack -->
         <div class="contack_content grid" data-content id="contack">
-         
 
-            <div class="container-box">
-                <span class="big-circle"></span>
-                <img src="img/shape.png" class="square" alt="" />
-                <div class="form">
-                  <div class="contact-info">
-                    <h3 class="title">Let's get in touch</h3>
-                    <p class="text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                      dolorum adipisci recusandae praesentium dicta!
-                    </p>
-          
-                    <div class="info">
-                      <div class="information">
-                        <img src="img/location.png" class="icon" alt="" />
-                        <p>Mataram (NTB), Indonesia</p>
-                      </div>
-                      <div class="information">
-                        <img src="img/email.png" class="icon" alt="" />
-                        <p>alvansatoru15@gmail.com</p>
-                      </div>
-                      <div class="information">
-                        <img src="img/phone.png" class="icon" alt="" />
-                        <p>+62 --------</p>
-                      </div>
-                    </div>
-          
-                    <div class="social-media">
-                      <p>Connect with us :</p>
-                      <div class="social-icons">
-                        <a href="#">
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#">
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </div>
-                    </div>
+          <div class="container-box">
+            <span class="big-circle"></span>
+            <img src="img/shape.png" class="square" alt="" />
+            <div class="form">
+              <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  dolorum adipisci recusandae praesentium dicta!
+                </p>
+
+                <div class="info">
+                  <div class="information">
+                    <img src="img/location.png" class="icon" alt="" />
+                    <p>Mataram (NTB), Indonesia</p>
                   </div>
-          
-                  <div class="contact-form">
-                    <span class="circle one"></span>
-                    <span class="circle two"></span>
-          
-                    <form action="index.html" autocomplete="off">
-                      <h3 class="title">Contact us</h3>
-                      <div class="input-container">
-                        <input type="text" name="name" class="input" />
-                        <label for="">Username</label>
-                        <span>Username</span>
-                      </div>
-                      <div class="input-container">
-                        <input type="email" name="email" class="input" />
-                        <label for="">Email</label>
-                        <span>Email</span>
-                      </div>
-                      <div class="input-container">
-                        <input type="tel" name="phone" class="input" />
-                        <label for="">Phone</label>
-                        <span>Phone</span>
-                      </div>
-                      <div class="input-container textarea">
-                        <textarea name="message" class="input"></textarea>
-                        <label for="">Message</label>
-                        <span>Message</span>
-                      </div>
-                      <input type="submit" value="Send" class="btn" />
-                    </form>
+                  <div class="information">
+                    <img src="img/email.png" class="icon" alt="" />
+                    <p>alvansatoru15@gmail.com</p>
+                  </div>
+                  <div class="information">
+                    <img src="img/phone.png" class="icon" alt="" />
+                    <p>+62 --------</p>
+                  </div>
+                </div>
+
+                <div class="social-media">
+                  <p>Connect with us :</p>
+                  <div class="social-icons">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-      </div>
+
+              <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+
+                <form action="index.html" autocomplete="off">
+                  <h3 class="title">Contact us</h3>
+                  <div class="input-container">
+                    <input type="text" name="name" class="input" />
+                    <label for="">Username</label>
+                    <span>Username</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="email" name="email" class="input" />
+                    <label for="">Email</label>
+                    <span>Email</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="tel" name="phone" class="input" />
+                    <label for="">Phone</label>
+                    <span>Phone</span>
+                  </div>
+                  <div class="input-container textarea">
+                    <textarea name="message" class="input"></textarea>
+                    <label for="">Message</label>
+                    <span>Message</span>
+                  </div>
+                  <input type="submit" value="Send" class="btn" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- gallery -->
+        <div class="gallery_content grid " data-content id="gallery">
+          <h1>Gallery</h1>
+          <div class="galleryContainer">
+              <div class="imageContainer">
+                  <img src="https://dotesports.com/wp-content/uploads/2022/03/03203902/samsung-gaming-optimisation-is-throttling-non-gaming-apps-on-mobile-devices.jpg?resize=768,432" alt="">
+              </div>
+              <div class="imageContainer">
+                  <img src="https://cdn.idntimes.com/content-images/community/2017/09/314964199-2a0d317f1a-b-daab8b003c08d43ea1dc153b17d27538.jpg" alt="">
+              </div>
+              <div class="imageContainer">
+                  <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/solar-harp-piet-haaksma.jpg" alt="">
+              </div>
+              <div class="imageContainer">
+                  <img src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+              </div>
+              <div class="imageContainer">
+                  <img src="https://images.pexels.com/photos/11392488/pexels-photo-11392488.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+              </div>
+              <div class="imageContainer">
+                  <img src="https://images.pexels.com/photos/11354945/pexels-photo-11354945.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+              </div>
+              <div class="imageContainer">
+                  <img src="https://2.bp.blogspot.com/-j7hcqHUPVR0/V_h5ofmX0eI/AAAAAAAAF_o/IYB_xiWl1ScbnJyogKOVuGjHuf0bl1TPACLcB/s1600/tanjakan%2Bcinta%2Bgunung%2Bsemeru.jpg" alt="">
+              </div>
+              <div class="imageContainer">
+                  <img src="https://3.bp.blogspot.com/-KRfnut2smZ0/WAkCxK02ioI/AAAAAAAAAus/EMkTCRoc5yUmEQq8N_3nV1Ha8wmd68HFwCLcB/s1600/langit%2Bmalam%2B6.jpg" alt="">
+              </div>
+          </div>
+
+
+       
+
+         
+        </div>
+
     </section>
   </main>
 
@@ -424,8 +472,8 @@
 
 
   <!-- fungsi download cv -->
-   <script>
-      document.addEventListener('DOMContentLoaded', function () {
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       const downloadButton = document.querySelector('.button');
 
       downloadButton.addEventListener('click', function (event) {
@@ -441,9 +489,11 @@
         document.body.removeChild(link);
       });
     });
-   </script>
+  </script>
+  <script src="fungsi_ketik.js"></script>
 
- 
+
+
 </body>
 
 </html>
