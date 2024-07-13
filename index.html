@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+  <!--=============== ICONS and lainnya ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contack.css">
+  <link rel="stylesheet" href="tabbar.css">
+
+
+  <title>satoru</title>
+</head>
+
+<body>
+ 
+   
+  <!--=============== HEADER ===============-->
+  <header class="profile container">
+    
+    <!-- Theme button -->
+    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+    <div class="profile__container grid">
+      <div class="profile__data">
+        <div class="profile__border">
+          <div class="profile__perfil">
+            <!-- Insert your image, according to the example size of the portfolio -->
+            <img src="assets/profile.avif" alt="">
+              
+          </div>
+        </div>
+
+        <h2 class="profile__name">ALVAN</h2>
+        <h3 class="profile__profession">Web Developer & Mobile Developer</h3>
+
+        <ul class="profile__social">
+          <a href="https://www.instagram.com/_nodealfan/" target="_blank" class="profile__social-link">
+            <i class="ri-instagram-line"></i>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" class="profile__social-link">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+          <a href="https://github.com/" target="_blank" class="profile__social-link">
+            <i class="ri-github-line"></i>
+          </a>
+        </ul>
+      </div>
+
+      <div class="profile__info grid">
+        <div class="profile__info-group">
+          <h3 class="profile__info-number">2</h3>
+          <p class="profile__info-description">
+            Years of <br> work
+          </p>
+        </div>
+        <div class="profile__info-group">
+          <h3 class="profile__info-number">+11</h3>
+          <p class="profile__info-description">
+            Completed <br> projects
+          </p>
+        </div>
+        <div class="profile__info-group">
+          <h3 class="profile__info-number">9</h3>
+          <p class="profile__info-description">Satisfied <br> customers</p>
+        </div>
+      </div>
+
+      <div class="profile__buttons">
+        <!-- Insert your CV -->
+        <a download="" href="assets/pdf/Gianell-Cv.pdf" class="button">
+          Download CV <i class="ri-download-line"></i>
+        </a>
+
+        <div class="profile__buttons-small">
+          <!-- Insert a real number plus country code -->
+          <a href="https://web.whatsapp.com/" target="_blank" class="button button__small button__gray">
+            <i class="ri-whatsapp-line"></i>
+          </a>
+          <!-- Insert your brand name or profile -->
+          <a href="https://m.me/bedimcode" target="_blank" class="button button__small button__gray">
+            <i class="ri-messenger-line"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--=============== MAIN ===============-->
+  <main class="main">
+    <section class="filters container">
+      <!--=============== FILTERS TABS ===============-->
+      <ul class="filters__content">
+        <button class="filters__button filter-tab-active" data-target="#projects">
+          Projects
+        </button>
+        <button class="filters__button" data-target="#skills">
+          Skills
+        </button>
+        <button class="filters__button" data-target="#contack">
+            Contack
+          </button>
+      </ul>
+
+      <div class="filters__sections">
+        <!--=============== PROJECTS ===============-->
+        <div class="projects__content grid filters__active" data-content id="projects">
+          <article class="projects__card">
+            <!-- Insert your image in a rectangular format (Ex: 600 x 400, 1000 x 800, 1200 x 1000, etc) -->
+            <img src="assets/movie.png" alt="" class="projects__img">
+
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Mobile Apps</span>
+                <h3 class="projects__title">Flutter</h3>
+                <a href="#" class="projects__button button button__small">
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projects__card">
+            <img src="assets/web.png" alt="" class="projects__img">
+
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Web</span>
+                <h3 class="projects__title">Project website</h3>
+                <a href="#" class="projects__button button button__small">
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projects__card">
+            <img src="assets/firebase.png" alt="" class="projects__img">
+
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Backend</span>
+                <h3 class="projects__title">Firebase</h3>
+                <a href="#" class="projects__button button button__small">
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projects__card">
+            <img src="assets/coding.jpg" alt="" class="projects__img">
+
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Study</span>
+                <h3 class="projects__title">Coding</h3>
+                <a href="#" class="projects__button button button__small">
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+      
+        </div>
+
+        <!--=============== SKILLS ===============-->
+        <div class="skills__content grid" data-content id="skills">
+
+          <div class="skills__area">
+            <h3 class="skills__title">Frontend Developer</h3>
+
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">HTML</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">CSS</h3>
+                    <span class="skills__level">Advanced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">JavaScript</h3>
+                    <span class="skills__level">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills__group">
+                <!--<div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">React</h3>
+                    <span class="skills__level">Intermediate</span>
+                  </div>
+                </div>-->
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Bootstrap</h3>
+                    <span class="skills__level">Intermediate</span>
+                  </div>
+                </div>
+
+                <!--<div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Git</h3>
+                    <span class="skills__level">Intermediate</span>
+                  </div>
+                </div>-->
+              </div>
+            </div>
+          </div>
+
+
+          
+
+          <div class="skills__area">
+            <h3 class="skills__title">Backend Developer</h3>
+
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">PHP</h3>
+                    <span class="skills__level">Intermediate</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">MySQL</h3>
+                    <span class="skills__level">Advance</span>
+                  </div>
+                </div>
+
+                <!--<div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Firebase</h3>
+                    <span class="skills__level">Intermediate</span>
+                  </div>
+                </div>-->
+              </div>
+
+              <div class="skills__group">
+
+                <!--<div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+                  <div>
+                    <h3 class="skills__name">Python</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>-->
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Firebase</h3>
+                    <span class="skills__level">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- mobile -->
+          <div class="skills__area">
+            <h3 class="skills__title" style="text-align: center;">Mobile Apps</h3>
+
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name" style="text-align: center;">Flutter</h3>
+                    <span class="skills__level" style="text-align: center;">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+              <div class="skills__group">
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div class="contack_content grid" data-content id="contack">
+         
+
+            <div class="container-box">
+                <span class="big-circle"></span>
+                <img src="img/shape.png" class="square" alt="" />
+                <div class="form">
+                  <div class="contact-info">
+                    <h3 class="title">Let's get in touch</h3>
+                    <p class="text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                      dolorum adipisci recusandae praesentium dicta!
+                    </p>
+          
+                    <div class="info">
+                      <div class="information">
+                        <img src="img/location.png" class="icon" alt="" />
+                        <p>Mataram (NTB), Indonesia</p>
+                      </div>
+                      <div class="information">
+                        <img src="img/email.png" class="icon" alt="" />
+                        <p>alvansatoru15@gmail.com</p>
+                      </div>
+                      <div class="information">
+                        <img src="img/phone.png" class="icon" alt="" />
+                        <p>+62 --------</p>
+                      </div>
+                    </div>
+          
+                    <div class="social-media">
+                      <p>Connect with us :</p>
+                      <div class="social-icons">
+                        <a href="#">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                          <i class="fab fa-linkedin-in"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="contact-form">
+                    <span class="circle one"></span>
+                    <span class="circle two"></span>
+          
+                    <form action="index.html" autocomplete="off">
+                      <h3 class="title">Contact us</h3>
+                      <div class="input-container">
+                        <input type="text" name="name" class="input" />
+                        <label for="">Username</label>
+                        <span>Username</span>
+                      </div>
+                      <div class="input-container">
+                        <input type="email" name="email" class="input" />
+                        <label for="">Email</label>
+                        <span>Email</span>
+                      </div>
+                      <div class="input-container">
+                        <input type="tel" name="phone" class="input" />
+                        <label for="">Phone</label>
+                        <span>Phone</span>
+                      </div>
+                      <div class="input-container textarea">
+                        <textarea name="message" class="input"></textarea>
+                        <label for="">Message</label>
+                        <span>Message</span>
+                      </div>
+                      <input type="submit" value="Send" class="btn" />
+                    </form>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </section>
+  </main>
+
+  <!--=============== FOOTER ===============-->
+  <footer class="footer container">
+    <span class="footer__copy">
+      &#169; Satoru. All rigths reserved
+    </span>
+  </footer>
+
+  <!--=============== SCROLLREVEAL ===============-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="fungsi.js"></script>
+  <script src="fungsi-contack.js"></script>
+
+ 
+</body>
+
+</html>
