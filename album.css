@@ -12,7 +12,7 @@ h1 {
 .imageContainer {
 	display: inline-block;
 	width: 30%;
-	min-width: 350px;
+	min-width: 300px;
 	height: 275px;
 	margin: 15px 1.33%;
 }
