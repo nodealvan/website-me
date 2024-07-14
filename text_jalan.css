@@ -1,15 +1,13 @@
 .container-music {
+  
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 48vh;
-    width: 100%;
   }
   
   .music {
-    margin-top: 20px;
- 
     width: 350px;
     height: 200px;
     display: flex;
@@ -30,31 +28,34 @@
 
   /* musik dan putar lagu */
   .radius {
+    box-shadow: inset;
     position: relative;
     width: fit-content;
     text-align: center; /* Pusatkan ikon di dalam container */
 }
 
 .music-icon {
-    font-size: 27px;
-    color: blue; /* warna ikon */
-    background-color: transparent; /* warna latar belakang lingkaran */
-    border-radius: 50%; /* membuat lingkaran */
-    padding: 14px; /* ukuran padding untuk mengatur ukuran lingkaran */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* bayangan untuk efek tumpukan */
+  height: 22px;
+  width: 22px;
+    font-size: 22px; /* Ukuran font untuk ikon musik */
+    color: blue; /* Warna ikon */
+    background-color: transparent; /* Warna latar belakang lingkaran */
+    border-radius: 50%; /* Membuat lingkaran */
+    padding: 20px; /* Ukuran padding untuk mengatur ukuran lingkaran */
+    box-shadow: 0 4px 8px rgba(7, 16, 141, 0.1); /* Bayangan untuk efek tumpukan */
     transition: transform 0.3s ease-in-out;
 }
 
 .music-circle {
     position: absolute;
-    bottom: -10px; /* Menentukan jarak antara lingkaran dan ikon */
+    bottom: -10px; /* Jarak antara lingkaran dan ikon */
     left: 50%; /* Posisi horizontal lingkaran */
     transform: translateX(-50%); /* Memusatkan lingkaran */
     width: 30px; /* Ukuran lingkaran */
     height: 30px; /* Ukuran lingkaran */
     background-color: blue; /* Warna lingkaran */
     border-radius: 50%; /* Membuat lingkaran */
-    z-index: -1; /* Mengatur kedalaman tumpukan */
+    z-index: -1; /* Kedalaman tumpukan */
     display: none; /* Sembunyikan lingkaran awalnya */
 }
 
@@ -65,12 +66,18 @@
 .song-list {
     list-style-type: none; /* Hapus bullets dari daftar lagu */
     padding: 0;
+    margin: 0;
 }
 
 .song-list li {
     padding: 10px 0;
     cursor: pointer; /* Ubah kursor menjadi pointer saat hover */
     transition: background-color 0.3s ease-in-out;
+    border-bottom: 1px solid #e0e0e0; /* Garis pemisah antara setiap lagu */
+}
+
+.song-list li:last-child {
+    border-bottom: none; /* Hapus garis pada lagu terakhir */
 }
 
 .song-list li:hover {
@@ -94,73 +101,82 @@
 .control-button:hover {
     transform: scale(1.2);
 }
+.modal-content {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 370px; /* Lebar konten modal */
+  background-color: #ffffff; /* Warna latar belakang konten modal */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek lembut */
+  border-radius: 10px; /* Sudut bulat pada modal */
+  margin: auto; /* Pusatkan modal secara horizontal */
+}
 
-    /* Gaya untuk modal */
-    .modal-content {
-      background-color: #ffffff; /* Warna latar belakang konten modal */
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek lembut */
-      border-radius: 10px; /* Sudut bulat pada modal */
-  }
+.modal-header {
+  background-color: #5c6bc0; /* Warna latar belakang header modal */
+  color: #ffffff; /* Warna teks header modal */
+  border-top-left-radius: 10px; /* Sudut bulat atas kiri */
+  border-top-right-radius: 10px; /* Sudut bulat atas kanan */
+}
+h5{
+  height: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.modal-title {
+  font-size: 1.5rem; /* Ukuran font judul */
+  text-align: center; /* Pusatkan teks judul */
+  margin-bottom: 0; /* Hapus margin bawah */
+}
 
-  .modal-header {
-      background-color: #5c6bc0; /* Warna latar belakang header modal */
-      color: #ffffff; /* Warna teks header modal */
-      border-top-left-radius: 10px; /* Sudut bulat atas kiri */
-      border-top-right-radius: 10px; /* Sudut bulat atas kanan */
-  }
+.modal-body {
+  padding: 20px; /* Padding dalam konten modal */
+}
 
-  .modal-title {
-      font-size: 1.5rem; /* Ukuran font judul */
-  }
+.song-list {
+  list-style-type: none; /* Hapus bullets dari daftar lagu */
+  padding: 0;
+  margin: 0;
+}
 
-  .modal-body {
-      padding: 20px; /* Padding dalam konten modal */
-  }
+.song-list li {
+  padding: 10px 0;
+  cursor: pointer; /* Ubah kursor menjadi pointer saat hover */
+  transition: background-color 0.3s ease-in-out;
+  border-bottom: 1px solid #e0e0e0; /* Garis pemisah antara setiap lagu */
+}
 
-  .song-list {
-      list-style-type: none; /* Hapus bullets dari daftar lagu */
-      padding: 0;
-      margin: 0;
-  }
+.song-list li:last-child {
+  border-bottom: none; /* Hapus garis pada lagu terakhir */
+}
 
-  .song-list li {
-      padding: 10px 0;
-      cursor: pointer; /* Ubah kursor menjadi pointer saat hover */
-      transition: background-color 0.3s ease-in-out;
-      border-bottom: 1px solid #e0e0e0; /* Garis pemisah antara setiap lagu */
-  }
+.song-list li:hover {
+  background-color: #f0f0f0; /* Warna latar belakang saat hover */
+}
 
-  .song-list li:last-child {
-      border-bottom: none; /* Hapus garis pada lagu terakhir */
-  }
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
-  .song-list li:hover {
-      background-color: #f0f0f0; /* Warna latar belakang saat hover */
-  }
+.control-button {
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
 
-  .controls {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-  }
+.control-button:hover {
+  transform: scale(1.2);
+}
 
-  .control-button {
-      font-size: 24px;
-      margin: 0 10px;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-  }
+/* Gaya untuk tombol close */
+.btn-close {
+  color: #ffffff; /* Warna ikon tombol close */
+}
 
-  .control-button:hover {
-      transform: scale(1.2);
-  }
-
-  /* Gaya untuk tombol close */
-  .btn-close {
-      color: #ffffff; /* Warna ikon tombol close */
-  }
-
-  .btn-close:hover {
-      color: #f0f0f0; /* Warna ikon tombol close saat hover */
-  }
+.btn-close:hover {
+  color: #f0f0f0; /* Warna ikon tombol close saat hover */
+}
