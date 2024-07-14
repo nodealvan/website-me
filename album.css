@@ -10,15 +10,15 @@ h1 {
 .galleryContainer {
 	justify-content: center;
 	align-items: center;
-	width: 50%;
+	width: 100%;
 	margin: 0 auto;
 }
 
 .imageContainer {
 	display: inline-block;
 	width: 100%;
-	min-width: 350px;
-	height: 275px;
+	min-width: 320px;
+	height: 260px;
 	margin: 20px 2.33%;
 }
 img {
@@ -29,7 +29,7 @@ img {
 	object-position: center;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 350px) {
 	.imageContainer {
 		width: 45%;
 		height: 250px;
@@ -37,7 +37,7 @@ img {
 	}
 }
 
-@media (max-width: 780px) {
+@media (max-width: 750px) {
 	.imageContainer {
 		display: block;
 		width: 95%;
