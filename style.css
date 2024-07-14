@@ -44,12 +44,11 @@
 }
 
 body {
+  
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: .3s;
-  /* For animation dark mode */
 }
 
 h1,
@@ -291,41 +290,43 @@ body.dark-theme {
 
 /*=============== FILTERS TABS===============*/
 .filters__content {
- 
   align-items: center;
-  margin: 2rem 0 2.5rem;
-  background-color: var(--text-color-lighten);
-  padding: .225em;
- width: 700px;
-  border-radius: .98rem;
   display: flex;
-  justify-content: space-around;
-  column-gap: .5rem;
-  max-width: 100%; /* Optional: to ensure responsiveness */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  
+  padding: 5px;
+  width: 350px;
+  margin: 0 auto; /* This centers the container horizontally */
 }
-
 
 .filters__button {
-  width: 80%;
-  border:none;
-  outline: none;
-  padding: 1rem;
-  color: var(--title-color);
-  font-size: var(--small-font-size);
-  font-family: var(--body-font);
-  font-weight: 300;
-  border-radius: .98rem;
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 10px 10px;
   cursor: pointer;
-  background-color: transparent;
-  transition: .3s;
+  font-size: 14px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
 }
 
-.filters__button:hover {
-  background-color: var(--body-color);
+.filters__button:hover,
+.filters__button.active {
+  background-color: #ffffff;
 }
+
+/* Color each tab text differently */
+/*.filters__button:nth-child(1) { color: #1972e7; }*/
+/*.filters__button:nth-child(2) { color: #0000FF; }
+.filters__button:nth-child(3) { color: #008000; }
+.filters__button:nth-child(4) { color: #FFA500; }*/
 
 /*=============== PROJECTS ===============*/
 .projects__card {
+  margin-top: 20px;
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
@@ -459,6 +460,7 @@ body.dark-theme {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+
 @media screen and (max-width: 320px) {
   .container {
     margin-left: 1rem;
