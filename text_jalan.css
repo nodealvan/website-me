@@ -4,18 +4,19 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 48vh;
+
+    height: 45vh;
   }
   
   .music {
-    width: 350px;
-    height: 200px;
+    width: 360px;
+    height: 1900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
   }
   
   #typewriter-title,
@@ -27,11 +28,18 @@
   }
 
   /* musik dan putar lagu */
+  
   .radius {
+    justify-content: center;
+    margin-bottom: 30px;
     box-shadow: inset;
     position: relative;
-    width: fit-content;
+    /*width: fit-content;*/
     text-align: center; /* Pusatkan ikon di dalam container */
+}
+.text{
+  text-align: center;
+  color: rgb(255, 0, 195);
 }
 
 .music-icon {
@@ -42,14 +50,13 @@
     background-color: transparent; /* Warna latar belakang lingkaran */
     border-radius: 50%; /* Membuat lingkaran */
     padding: 20px; /* Ukuran padding untuk mengatur ukuran lingkaran */
-    box-shadow: 0 4px 8px rgba(7, 16, 141, 0.1); /* Bayangan untuk efek tumpukan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek tumpukan */
     transition: transform 0.3s ease-in-out;
 }
 
 .music-circle {
     position: absolute;
     bottom: -10px; /* Jarak antara lingkaran dan ikon */
-    left: 50%; /* Posisi horizontal lingkaran */
     transform: translateX(-50%); /* Memusatkan lingkaran */
     width: 30px; /* Ukuran lingkaran */
     height: 30px; /* Ukuran lingkaran */
@@ -121,7 +128,6 @@
 h5{
   height: 12px;
   align-items: center;
-  justify-content: center;
 }
 .modal-title {
   font-size: 1.5rem; /* Ukuran font judul */

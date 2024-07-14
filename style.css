@@ -74,18 +74,19 @@ img {
 
 /*=============== THEME ===============*/
 .change-theme {
-  position: absolute;
-  top: 1.5rem;
-  right: 0;
-  font-size: 1.25rem;
-  color: var(--title-color);
+  position: absolute; /* Position the icon absolutely */
+  top: 1.5rem; /* 1.5rem from the top */
+  right: 20px; /* 10px from the right */
+  font-size: 1.25rem; /* Font size */
+  color: var(--title-color); /* Initial color */
   cursor: pointer;
-  transition: .3s;
+  transition: color 0.3s; /* Smooth color transition */
 }
 
 .change-theme:hover {
-  color: var(--first-color);
+  color: var(--first-color); /* Color change on hover */
 }
+
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
