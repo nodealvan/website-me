@@ -76,7 +76,7 @@ img {
 .change-theme {
   position: absolute; /* Position the icon absolutely */
   top: 1.5rem; /* 1.5rem from the top */
-  right: 20px; /* 10px from the right */
+  right: 40px; /* 10px from the right */
   font-size: 1.25rem; /* Font size */
   color: var(--title-color); /* Initial color */
   cursor: pointer;
@@ -292,6 +292,7 @@ body.dark-theme {
 
 /*=============== FILTERS TABS===============*/
 .filters__content {
+ 
   align-items: center;
   display: flex;
   justify-content: space-between;
