@@ -14,9 +14,8 @@
   width: 40px;
   background-color: transparent;
   position: relative;
-  top: 0.89px;
-  right: 120px;
-  bottom: 19px;
+
+  right: 100px;
   border: none;
   cursor: pointer;
   transition: transform 0.3s;
@@ -213,7 +212,6 @@
   position: absolute;
   top: 10px;
   bottom: 20px;
-
   right: 20px;
   border: none;
   cursor: pointer;
