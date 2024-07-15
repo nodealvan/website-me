@@ -7,7 +7,7 @@
         const url = downloadButton.getAttribute('href');
         const link = document.createElement('a');
         link.href = url;
-        link.setAttribute('download', 'Gianell-Cv.pdf');
+        link.setAttribute('download', 'alvan-Cv.pdf');
 
         document.body.appendChild(link);
         link.click();

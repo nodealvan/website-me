@@ -8,53 +8,41 @@
   <!--=============== FAVICON ===============-->
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-  <!--=============== ICONS and lainnya ===============-->
+  <!--=============== REMIX ICONS ===============-->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" integrity="sha512-3M0yS5OK9PZoxN8eFO2oeeU2Nth9uUxUy41jz6GBLPCUk/LYqPZLa/PN8GtAaZw0Gz9h09GmVoOVeRfo6l6X2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="contack.css">
-  <link rel="stylesheet" href="tabbar.css">
-  <link rel="stylesheet" href="album.css">
-  <link rel="stylesheet" href="text_jalan.css">
-  <link rel="stylesheet" href="container-dasar.css">
- 
+  <link rel="stylesheet" href="audio.css">
+  <link rel="stylesheet" href="fungsi-ketik.css">
+  <link rel="stylesheet" href="gallery.css">
 
 
-  <title>satoru</title>
+
+  <title>portfolio</title>
 </head>
 
-
 <body>
-
-<div class="container-dasar">
-  
   <!--=============== HEADER ===============-->
   <header class="profile container">
-
     <!-- Theme button -->
     <i class="ri-moon-line change-theme" id="theme-button"></i>
-   
 
     <div class="profile__container grid">
       <div class="profile__data">
         <div class="profile__border">
           <div class="profile__perfil">
             <!-- Insert your image, according to the example size of the portfolio -->
-            <img src="assets/profile.avif" alt="">
-
+            <img src="assets/profile.png" alt="">
           </div>
         </div>
 
         <h2 class="profile__name">ALVAN</h2>
-        <h3 class="profile__profession">Web Developer & Mobile Developer</h3>
+        <h3 class="profile__profession">Web developer & Mobile developer</h3>
 
         <ul class="profile__social">
-          <a href="https://www.instagram.com/_nodealfan/" target="_blank" class="profile__social-link">
+          <a href="https://www.instagram.com/" target="_blank" class="profile__social-link">
             <i class="ri-instagram-line"></i>
           </a>
           <a href="https://www.linkedin.com/" target="_blank" class="profile__social-link">
@@ -80,21 +68,20 @@
           </p>
         </div>
         <div class="profile__info-group">
-          <h3 class="profile__info-number">9</h3>
+          <h3 class="profile__info-number">14</h3>
           <p class="profile__info-description">Satisfied <br> customers</p>
         </div>
       </div>
 
       <div class="profile__buttons">
         <!-- Insert your CV -->
-        <a download="" href="assets/pdf/alvan-Cv.pdf" class="button">
+        <a download="" href="assets/pdf/Gianell-Cv.pdf" class="button">
           Download CV <i class="ri-download-line"></i>
         </a>
 
-
         <div class="profile__buttons-small">
           <!-- Insert a real number plus country code -->
-          <a href="https://web.whatsapp.com/" target="_blank" class="button button__small button__gray">
+          <a href="https://api.whatsapp.com/send?phone=51123456789&text=Hello, more information!" target="_blank" class="button button__small button__gray">
             <i class="ri-whatsapp-line"></i>
           </a>
           <!-- Insert your brand name or profile -->
@@ -104,15 +91,53 @@
         </div>
       </div>
     </div>
-      <!-- text -->
-  <div class="container-music">
-    <div class="music">
-        <h1 id="typewriter-title"></h1>
-        <p id="typewriter-content"></p>
-    </div>
+  </header>
+
+
+  <!-- Audio Player -->
+<div class="body-audio">
+
+<!-- animasi lagi ngetik -->
+    <div id="typewriter-title"></div>
+    <div id="typewriter-content"></div>
+
+<!-- Audio Player -->
+<div class="audio-player" id="musicModal">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-body">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  <img src="icon/close.png" alt="Close Icon">
+              </button>
+              <ul class="song-list">
+                  <li data-src="assets/kesayanganku.mp3">Kesayanganku</li>
+                  <li data-src="assets/who.mp3">Who I Am</li>
+                  <li data-src="assets/on_may_way.mp3">On May Way</li>
+                  <!--<li data-src="assets/perfect.mp3">Perfect x Happier</li>-->
+                  <li data-src="assets/its_you.mp3">It's You</li>
+                  <li data-src="assets/Royalty.mp3">Royalty</li>
+                  <li data-src="assets/dark_paradise.mp3">Dark Paradise</li>
+                
+                  <!-- Add more songs as needed -->
+              </ul>
+              <div class="player-controls">
+                  <button id="previous-button" class="previous-btn ri ri-arrow-left-line"></button>
+                  <button id="play-pause-button" class="play-btn ri ri-play-circle-line"></button>
+                  <button id="next-button" class="next-btn ri ri-arrow-right-line"></button>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 
-  </header>
+
+<!-- icon tapa -->
+</div>
+<div class="tap-image">
+  <img src="icon/musik.png" alt="Music Icon" id="music-button" class="music-icon">
+</div>
+
+  
 
 
   <!--=============== MAIN ===============-->
@@ -126,11 +151,8 @@
         <button class="filters__button" data-target="#skills">
           Skills
         </button>
-        <button class="filters__button" data-target="#contack">
-          Contack
-        </button>
         <button class="filters__button" data-target="#gallery">
-          Foto
+          Gallery
         </button>
       </ul>
 
@@ -144,21 +166,7 @@
             <div class="projects__modal">
               <div>
                 <span class="projects__subtitle">Mobile Apps</span>
-                <h3 class="projects__title">Flutter</h3>
-                <a href="#" class="projects__button button button__small">
-                  <i class="ri-link"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="projects__card">
-            <img src="assets/web.png" alt="" class="projects__img">
-
-            <div class="projects__modal">
-              <div>
-                <span class="projects__subtitle">Web</span>
-                <h3 class="projects__title">Project website</h3>
+                <h3 class="projects__title">MOVIE</h3>
                 <a href="#" class="projects__button button button__small">
                   <i class="ri-link"></i>
                 </a>
@@ -171,8 +179,22 @@
 
             <div class="projects__modal">
               <div>
-                <span class="projects__subtitle">Backend</span>
-                <h3 class="projects__title">Firebase</h3>
+                <span class="projects__subtitle">Database</span>
+                <h3 class="projects__title">Firebase Setup</h3>
+                <a href="#" class="projects__button button button__small">
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projects__card">
+            <img src="assets/web.png" alt="" class="projects__img">
+
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Web Design</span>
+                <h3 class="projects__title">Login & Sign</h3>
                 <a href="#" class="projects__button button button__small">
                   <i class="ri-link"></i>
                 </a>
@@ -185,8 +207,8 @@
 
             <div class="projects__modal">
               <div>
-                <span class="projects__subtitle">Study</span>
-                <h3 class="projects__title">Coding</h3>
+                <span class="projects__subtitle">Coding</span>
+                <h3 class="projects__title">Html,css,Js and Flutter</h3>
                 <a href="#" class="projects__button button button__small">
                   <i class="ri-link"></i>
                 </a>
@@ -197,7 +219,6 @@
 
         <!--=============== SKILLS ===============-->
         <div class="skills__content grid" data-content id="skills">
-
           <div class="skills__area">
             <h3 class="skills__title">Frontend Developer</h3>
 
@@ -250,20 +271,17 @@
                   </div>
                 </div>
 
-                <!--<div class="skills__data">
+                <div class="skills__data">
                   <i class="ri-checkbox-circle-line"></i>
 
                   <div>
                     <h3 class="skills__name">Git</h3>
                     <span class="skills__level">Intermediate</span>
                   </div>
-                </div>-->
+                </div>
               </div>
             </div>
           </div>
-
-
-
 
           <div class="skills__area">
             <h3 class="skills__title">Backend Developer</h3>
@@ -299,15 +317,6 @@
               </div>
 
               <div class="skills__group">
-
-                <!--<div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">Python</h3>
-                    <span class="skills__level">Basic</span>
-                  </div>
-                </div>-->
-
                 <div class="skills__data">
                   <i class="ri-checkbox-circle-line"></i>
 
@@ -316,13 +325,23 @@
                     <span class="skills__level">Intermediate</span>
                   </div>
                 </div>
+
+                <!--<div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Node Js</h3>
+                    <span class="skills__level">Intermediate</span>
+                  </div>
+                </div>-->
               </div>
             </div>
           </div>
 
-          <!-- mobile -->
+
+          <!-- flutter -->
           <div class="skills__area">
-            <h3 class="skills__title" style="text-align: center;">Mobile Apps</h3>
+            <h3 class="skills__title">Mobile Apps</h3>
 
             <div class="skills__box">
               <div class="skills__group">
@@ -330,169 +349,41 @@
                   <i class="ri-checkbox-circle-line"></i>
 
                   <div>
-                    <h3 class="skills__name" style="text-align: center;">Flutter</h3>
-                    <span class="skills__level" style="text-align: center;">Intermediate</span>
+                    <h3 class="skills__name">Flutter</h3>
+                    <span class="skills__level">Intermediate</span>
                   </div>
                 </div>
-              </div>
-              <div class="skills__group">
               </div>
             </div>
           </div>
+
+
         </div>
 
-        <!-- contack -->
-        <div class="contack_content grid" data-content id="contack">
 
-          <div class="container-box">
-            <span class="big-circle"></span>
-            <img src="img/shape.png" class="square" alt="" />
-            <div class="form">
-              <div class="contact-info">
-                <h3 class="title">Let's get in touch</h3>
-                <p class="text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                  dolorum adipisci recusandae praesentium dicta!
-                </p>
 
-                <div class="info">
-                  <div class="information">
-                    <img src="img/location.png" class="icon" alt="" />
-                    <p>Mataram (NTB), Indonesia</p>
-                  </div>
-                  <div class="information">
-                    <img src="img/email.png" class="icon" alt="" />
-                    <p>alvansatoru15@gmail.com</p>
-                  </div>
-                  <div class="information">
-                    <img src="img/phone.png" class="icon" alt="" />
-                    <p>+62 --------</p>
-                  </div>
-                </div>
+ <!--=============== gallery ===============-->
+<div class="body-container">
+  <div class="skills__content grid" data-content id="gallery">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="assets/ml.png" alt="Image 1">
+        <p class="text">Mode Gabut</p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/coffe.jpg" alt="Image 2">
+      </div>
+    </div>
+  
+  </div>
+</div>
 
-                <div class="social-media">
-                  <p>Connect with us :</p>
-                  <div class="social-icons">
-                    <a href="#">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                      <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
 
-              <div class="contact-form">
-                <span class="circle one"></span>
-                <span class="circle two"></span>
 
-                <form action="index.html" autocomplete="off">
-                  <h3 class="title">Contact us</h3>
-                  <div class="input-container">
-                    <input type="text" name="name" class="input" />
-                    <label for="">Username</label>
-                    <span>Username</span>
-                  </div>
-                  <div class="input-container">
-                    <input type="email" name="email" class="input" />
-                    <label for="">Email</label>
-                    <span>Email</span>
-                  </div>
-                  <div class="input-container">
-                    <input type="tel" name="phone" class="input" />
-                    <label for="">Phone</label>
-                    <span>Phone</span>
-                  </div>
-                  <div class="input-container textarea">
-                    <textarea name="message" class="input"></textarea>
-                    <label for="">Message</label>
-                    <span>Message</span>
-                  </div>
-                  <input type="submit" value="Send" class="btn" />
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- gallery -->
-        <div class="gallery_content grid " data-content id="gallery">
-          <div class="album">
-            <h1>Gallery</h1>
-          <div class="galleryContainer">
-              <div class="imageContainer">
-                  <img src="https://dotesports.com/wp-content/uploads/2022/03/03203902/samsung-gaming-optimisation-is-throttling-non-gaming-apps-on-mobile-devices.jpg?resize=768,432" alt="">
-              </div>
-              <div class="imageContainer">
-                  <img src="https://cdn.idntimes.com/content-images/community/2017/09/314964199-2a0d317f1a-b-daab8b003c08d43ea1dc153b17d27538.jpg" alt="">
-              </div>
-              <div class="imageContainer">
-                  <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/solar-harp-piet-haaksma.jpg" alt="">
-              </div>
-              <div class="imageContainer">
-                  <img src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
-              </div>
-              <div class="imageContainer">
-                  <img src="https://images.pexels.com/photos/11392488/pexels-photo-11392488.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
-              </div>
-              <div class="imageContainer">
-                  <img src="https://images.pexels.com/photos/11354945/pexels-photo-11354945.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
-              </div>
-              <div class="imageContainer">
-                  <img src="https://2.bp.blogspot.com/-j7hcqHUPVR0/V_h5ofmX0eI/AAAAAAAAF_o/IYB_xiWl1ScbnJyogKOVuGjHuf0bl1TPACLcB/s1600/tanjakan%2Bcinta%2Bgunung%2Bsemeru.jpg" alt="">
-              </div>
-              <div class="imageContainer">
-                  <img src="https://3.bp.blogspot.com/-KRfnut2smZ0/WAkCxK02ioI/AAAAAAAAAus/EMkTCRoc5yUmEQq8N_3nV1Ha8wmd68HFwCLcB/s1600/langit%2Bmalam%2B6.jpg" alt="">
-              </div>
-          </div>
-          </div>
-        </div>
-
+      </div>
     </section>
   </main>
-</div>
-
-
-  <!-- Modal dan script tidak diubah -->
-  <div class="modal fade" id="musicModal" tabindex="-1" aria-labelledby="musicModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="musicModalLabel">Tap untuk memutar musik</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Daftar Lagu yang Dapat Diputar -->
-                <ul class="song-list">
-                    <li data-src="assets/kesayanganku.mp3">Al Ghazali ft. Chelsea Shania - Kesayanganku</li>
-                    <li data-src="assets/Alan Walker Putri Ariani Peder Elias  Who I Am.mp3">Alan Walker Putri Ariani Peder Elias  Who I Am</li>
-                    <li data-src="assets/lana del rey  dark paradise.mp3">lana del rey dark paradise</li>
-                    <li data-src="assets/On my way.mp3">On my way</li>
-                    <li data-src="assets/Royalty.mp3">Royalty</li>
-                    <li data-src="assets/its_you.mp3">its you</li>
-                    <li data-src="assets/Perfect x Happier Lyrics TikTok Mashup  Ed Sheeran x Olivia Rodrigo.mp3">Perfect x Happier (Ed Sheeran x Olivia Rodrigo)</li>
-                    <li data-src="assets/night.mp3">Lord Huron - The Night We Met</li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <!-- Tombol kontrol pemutaran lagu -->
-                <div class="controls">
-                    <i class="ri-arrow-left-line control-button" id="previous-button"></i>
-                    <i class="ri-play-circle-line control-button" id="play-pause-button"></i>
-                    <i class="ri-arrow-right-line control-button" id="next-button"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
   <!--=============== FOOTER ===============-->
   <footer class="footer container">
@@ -504,22 +395,23 @@
   <!--=============== SCROLLREVEAL ===============-->
   <script src="https://unpkg.com/scrollreveal"></script>
 
-
-  <!-- musik -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="fungsi-musik.js"></script>
-
   <!--=============== MAIN JS ===============-->
-  <script src="fungsi.js"></script>
-  <script src="fungsi-contack.js"></script>
-
-
-  <!-- fungsi download cv -->
-
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="audio.js"></script>
+  <!--<script src="fungsi_ketik.js"></script>-->
   <script src="download_cv.js"></script>
   <script src="fungsi_ketik.js"></script>
+  <script src="fungsi-audio.js"></script>
 
 
+
+
+
+  
+
+
+ 
 
 </body>
 
