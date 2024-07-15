@@ -14,8 +14,9 @@
   width: 40px;
   background-color: transparent;
   position: relative;
-  right: 130px;
-  bottom: 20px;
+  top: 0.89px;
+  right: 120px;
+  bottom: 19px;
   border: none;
   cursor: pointer;
   transition: transform 0.3s;
