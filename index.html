@@ -106,9 +106,14 @@
   <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
           <div class="modal-body">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                  <img src="icon/close.png" alt="Close Icon">
-              </button>
+
+       <!-- close tapi tidak menghentikan music -->
+       <img src="icon/maximize.png" alt="Close no music" class="btn-close-nomusic" data-bs-dismiss="modal" aria-label="Close">
+
+       <!-- close music modal -->
+                  <img src="icon/close.png" alt="Close Icon" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            
+                  <!-- kumpulan lagu -->
               <ul class="song-list">
                   <li data-src="assets/kesayanganku.mp3">Kesayanganku</li>
                   <li data-src="assets/who.mp3">Who I Am</li>

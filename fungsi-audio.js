@@ -4,20 +4,37 @@ document.addEventListener("DOMContentLoaded", function() {
   const closeButton = musicModal.querySelector(".btn-close");
   const songListItems = document.querySelectorAll(".song-list li");
   let audioPlayer = new Audio();
-  let currentSongIndex = -1; // -1 artinya tidak ada lagu yang diputar
+  let currentSongIndex = -1; 
 
-  // Show modal when music button is clicked
+  
   musicButton.addEventListener("click", function() {
       musicModal.style.display = "block";
   });
 
-  // Hide modal when close button is clicked
+  
   closeButton.addEventListener("click", function() {
       musicModal.style.display = "none";
       stopSong();
   });
 
-  // Play song when a song list item is clicked
+//  close tapi tidak menghntikan music
+// Ambil elemen tombol close nomusic
+const closeButtonNoMusic = document.querySelector('.btn-close-nomusic');
+
+// Tambahkan event listener untuk klik pada tombol close nomusic
+closeButtonNoMusic.addEventListener('click', function() {
+    // Tutup modal tanpa menghentikan musik dengan memanipulasi kelas modal
+    const modal = document.getElementById('musicModal');
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    modal.setAttribute('style', 'display: none');
+    // Tambahan aksi lain sesuai kebutuhan
+    // misalnya menghentikan pemutaran musik di sini jika diperlukan
+});
+
+
+
+  
   songListItems.forEach((item, index) => {
       item.addEventListener("click", function() {
           const songSrc = item.getAttribute("data-src");
@@ -25,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
-  // Control buttons
+  
   const playPauseButton = document.getElementById("play-pause-button");
   const nextButton = document.getElementById("next-button");
   const previousButton = document.getElementById("previous-button");
